@@ -1,0 +1,1 @@
+{"uuid": "a51767bd-05ff-45a4-8f04-e36bce205ad2", "children": ["b267ed9a-1dec-4659-968e-f260717f023b"], "befores": [{"name": "get_team_fixture", "status": "passed", "steps": [{"name": "Получение команды", "status": "passed", "start": 1745262404477, "stop": 1745262404742}], "start": 1745262404477, "stop": 1745262404742}], "start": 1745262404477, "stop": 1745262407020}
