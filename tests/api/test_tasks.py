@@ -108,10 +108,10 @@ def test_delete_task_negative(task_api):
     [
         ({}, 400, "input_005"),
         ({"invalid_field": "Test name"}, 400, "input_005"),
-        ({"name": "Valid", "status": "invalid_status"}, 400, "input_005"),
+        ({"name": "Valid", "status": "invalid_status"}, 400, "CRTSK_001"),
         ({"name": "Valid", "due_date": "2024-01-01"}, 400, "input_006"),
         (None, 400, "input_005"),
-        ({"list_id": "invalid_list_123"}, 400, "input_005"),
+        ({"list_id": "invalid_list_123"}, 400, "INPUT_003"),
     ]
 )
 def test_create_task_negative(task_api, get_list_fixture, task_data, expected_status, expected_ecode):
