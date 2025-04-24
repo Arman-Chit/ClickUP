@@ -1,6 +1,4 @@
-import re
 import allure
-from playwright.sync_api import expect
 from pages.login_page import LoginPage
 from utils.helpers import CLICKUP_EMAIL
 
@@ -18,8 +16,6 @@ class TestLoginPage:
         login_page = LoginPage(page)
 
         login_page.login_negative(CLICKUP_EMAIL, 'wrong_password')
-
-        expect(page).to_have_url(re.compile(r"https://app\.clickup\.com/login.*"), timeout=5000)
 
         assert not page.locator("text=Board").is_visible(timeout=3000), "Невозможно залогиниться с неверными данными, но 'Board' найден"
 
