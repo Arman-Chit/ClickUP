@@ -15,7 +15,6 @@ def playwright_instance():
 @ pytest.fixture(scope="session")
 def browser(playwright_instance):
     with allure.step("Запуск браузера Chromium (headful режим)"):
-        # Всегда запускаем браузер с интерфейсом (headful)
         browser = playwright_instance.chromium.launch(headless=False, slow_mo=1000)
     yield browser
     with allure.step("Закрытие браузера"):

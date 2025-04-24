@@ -6,7 +6,7 @@ load_dotenv()
 def get_env_variable(name):
     value = os.getenv(name)
     if not value:
-        raise ValueError(f"Environment variable '{name}' is not set. Please make sure it is defined in the .env file.")
+        raise ValueError(f"Переменная окружения '{name}' не установлена. Пожалуйста, убедитесь, что она задана в файле .env.")
     return value
 
 try:
